@@ -1,0 +1,93 @@
+extends layout
+
+block content
+	include module/header
+	main#main.l-main
+		section.sec.sec-signUp
+			div.container.cf
+				h1 Build software better, together.
+				form#signUpHome.signUpHome(method="post", action="/join", accept-charset="UTF-8")
+					dl.input
+						dd
+							input(type="text", data-autocheck-url="/signup_check/username", placeholder="Pick a username")
+					dl.input
+						dd
+							input(type="email", data-autocheck-url="/signup_check/email", placeholder="Your email")
+					dl.input
+						dd
+							input(type="password", data-autocheck-url="/signup_check/password", placeholder="Create a password")
+					p.textPrompt
+						| Use at least one lowercase letter, one numeral, and seven characters.
+					button.btn(type="submit") Sign up for GitHub
+					p.textPrompt
+						| By clicking "Sign up for GitHub", you agree to our 
+						a(href="#") terms of service
+						|  and 
+						a(href="#") privacy policy.
+				p.subHeading
+					| Powerful collaboration, code review, and code management 
+					| for open source and private projects. Need private repositories? 
+					a(href="") Upgraded plans start at $7/mo.
+		section.sec.sec-benefit
+			div.container
+				h1.heading Why you'll love GitHub.
+				p.lead
+					a(href="#") Powerful features
+					|  to make software development more collaborative.
+				ul.row.cf
+					li.column
+						h3 Great collaboration starts with communication.
+						p
+							| Review changes, comment on lines of code, report issues, 
+							| and plan the future of your project with disscussion tools.
+					li.column
+						h3 Friction-less development across teams.
+						p
+							| Work with project collaborators or teams of people in 
+							| organization accounts to communicate with ease.
+					li.column
+						h3 World's largest open source community.
+						p
+							| Share your projects with the world, get feedback, and 
+							| contribute to 
+							a(href="#") millions of repositories 
+							| hosted on GitHub.
+		section.sec.sec-desktop
+			div.container
+				h1.heading The power of GitHub on your desktop.
+				p.lead
+					| Browse repositories, create and manage branches, and commit 
+					| changes-all from your desktop.
+				a.btn.is-btn-blue(href="#") Download GitHub for Mac
+				p.textPrompt
+					| Requires OS X 10.7+ · 
+					a(href="#") Learn more
+				img(src="/img/gh-mac-app.png", alt="")
+				div.textCenter
+					h3 Looking for other applications?
+					ul.moreApps
+						li
+							a(href="#").showMac
+								img(src="/img/gh-app-windows.png", alt="")
+						li
+							a(href="#").showMac
+								img(src="/img/gh-app-eclipse.png", alt="")
+		section.sec.sec-enterprise
+			div.container
+				h1.heading Bring GitHub to work.
+				p.lead Use GitHub Enterprise, the best way to build soft ware, on your servers.
+				a.btn.is-btn-blue(href="") Learn more about Enterprise
+				img(src="/img/gh-enterprise-code.png", alt="GitHub Enterprise")
+
+
+	include module/footer
+	script(src="//code.jquery.com/jquery-1.10.2.min.js")
+	- var env = "develoption"
+	if (env === "develoption")
+		script(src="js/main.js")
+	else if (env === "production")
+		script(src="js/main.min.js")
+	else
+		//-<!-- build:js public/js/main.min.js -->
+		script(src="public/js/main.js")
+		//-<!-- endbuild -->

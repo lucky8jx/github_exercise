@@ -1,0 +1,288 @@
+/*********************************
+* Main stylesheet
+***********************************/
+// If you really want to do something, you'll find a way. If you don't, you'll find an excuse.
+
+//=============================================
+// import mixins
+//==============================================
+@import './mixins/style'
+
+//============================================
+// import normalize
+//=============================================
+@import './module/normalize'
+
+//==============================================
+// Some basic style
+//==============================================
+body
+	width 100%
+	font 13px/1.4 Arial, sans-serif
+	color rgb(51, 51, 51)
+	background-color rgb(255, 255, 255)
+ul
+	margin 0
+	padding 0
+	list-style none
+a
+	color rgb(65, 131, 196)
+	text-decoration none
+	&:hover
+		text-decoration underline
+
+input[type="text"]
+	padding 4px 20px 4px 8px
+	font-size 12px
+	background-color rgb(252, 252, 252)
+	box-shadow(1px 1px 0 rgb(255, 255, 255))
+input
+	color rgb(51, 51, 51)
+	border 1px solid rgb(221, 221, 221)
+	border-radius(3px)
+	&:focus
+		border-color rgb(81, 167, 232)
+		box-shadow-two(0 1px 2px rgba(0, 0, 0, 0.075) inset, 0 0 5px rgba(81, 167, 232, 0.5))
+
+// clear fixed
+.cf
+	&:before
+	&:after
+		content " "
+		display table
+	&:after
+		clear both
+
+//=============================================
+// import style of header
+//=================================================
+@import './module/header'
+
+//===============================================
+// The main style 
+//==================================================
+
+.container
+	position relative 
+	width 980px
+	margin 0 auto
+
+.btn
+	vertical-align middle
+	white-space nowrap
+	cursor pointer
+	border 1px solid rgb(213, 213, 213)
+	transition(all 100ms ease-in 0s)
+	&:hover
+		text-decoration none	
+.sec
+	position relative
+	padding 80px 0
+	border-bottom 1px solid rgb(229, 229, 229)
+	// text-align center
+	> div
+		> .is-btn-blue
+			display inline-block
+			padding 12px 20px
+			font-size 18px
+			font-weight normal
+			color rgb(255, 255, 255)
+			border-radius(6px)
+			vertical(rgb(89, 155, 205), rgb(68, 134, 192), rgb(48, 114, 179))
+			text-shadow(0 -1px 0 rgba(0, 0, 0, 0.25))
+		> img
+			display block
+			width 100%
+			margin 30px auto
+			border 1px solid rgba(0, 0, 0, 0.25)
+			border-radius(5px)
+			box-shadow(0 5px 15px rgba(0, 0, 0, 0.15))
+.heading
+	margin 0 auto
+	font-size 42px
+	font-weight normal
+
+.lead
+	margin 0 auto
+	font-size 20px
+	font-weight 300
+	color rgb(119, 119, 119)
+
+// sign up section
+.sec-signUp
+	background-color rgb(32, 32, 32)
+	background-image url('/img/octicons-bg.png')
+	background-position center
+	text-shadow(0 1px 3px rgb(34, 34, 34))
+	> div
+		> h1
+			float left
+			width 600px
+			margin 0 0 15px
+			padding-top 10px
+			font-size 70px
+			font-weight normal
+			color rgb(255, 255, 255)
+			line-height 1
+			letter-spacing -1px
+			
+.subHeading
+	margin 0
+	font-size 21px
+	color rgb(255, 255, 255)
+	line-height 1.5
+	> a
+		font-weight 500
+
+.signUpHome
+	float right
+	width 320px
+	margin-left 40px
+	> .btn
+		width 100%
+		padding-top 11px
+		padding-bottom 11px
+		font-size 16px
+		color rgb(255, 255, 255)
+		border 0 none
+		border-radius(5px)
+		vertical(rgb(138, 221, 109), rgb(117, 199, 88), rgb(96, 176, 68))
+		text-shadow(0 -1px 0 rgba(0, 0, 0, 0.25))
+		&:hover
+			border-color rgb(74, 153, 62)
+			vertical(rgb(121, 216, 88), rgb(103, 187, 74), rgb(86, 158, 61))
+		
+.input
+	position relative
+	margin-bottom 10px
+	margin-top 0
+	> dd
+		margin 0
+		> input
+			width 93%
+			padding 10px
+			font-size 16px
+			border-color rgb(255, 255, 255)
+			border-radius(5px)
+			&:focus
+				border-color rgb(255, 255, 255)
+				background-color rgb(255, 255, 255)
+				box-shadow-two(0 1px 2px rgba(0, 0, 0, 0.075) inset, 0 0 12px rgba(255, 255, 255, 0.75))
+	+ .textPrompt
+		margin-top 5px
+.textPrompt
+	color rgb(153, 153, 153)
+
+// benefits section
+.sec-benefit
+	> div
+		text-align center
+.row
+	margin 0 -15px
+.column
+	position relative
+	float left
+	width 33%
+	margin-top 150px
+	padding 15px
+	text-align center
+	-moz-box-sizing border-box
+	&:after
+		content ""
+		position absolute
+		left 50%
+		top -100px
+		display block
+		width 100px
+		height 100px
+		margin-left -50px
+		border 1px solid rgb(229, 229, 229)
+		background-image url('/img/octocat-spinner-32.gif')
+		background-position center
+		background-repeat no-repeat
+		// background-color red
+		border-radius(50%)
+	> h3
+		margin 0 0 9px
+		font-size 21px
+		font-weight normal
+		color rgb(42, 42, 42)
+		line-height 1.1
+	> p
+		margin 0
+		font-size 14px
+		color rgb(90, 90, 90)
+
+// desktop section
+.sec-desktop
+	> div
+		position relative
+		text-align center
+		> .btn
+			margin-top 15px
+			border-color rgb(42, 101, 160)
+		> img
+			// display block
+			// width 100%
+			// margin 30px auto
+			// border 1px solid rgba(0, 0, 0, 0.25)
+			// border-radius(5px)
+			// box-shadow(0 5px 15px rgba(0, 0, 0, 0.15))
+
+.textCenter
+	position relative
+	margin-top 100px
+	&:before
+		content ""
+		position absolute
+		left 50%
+		top -50px
+		display block
+		width 50%
+		height 0
+		margin-left -245px
+		border-bottom 1px solid rgb(238, 238, 238)
+	> h3
+		font-size 16px
+.moreApps
+	margin-top 25px
+	> li
+		display inline-block
+		padding 0 20px
+.showMac
+	&:hover
+		opacity 0.75
+	> img
+		height 50px
+
+// enterprise section
+.sec-enterprise
+	max-height 353px
+	overflow hidden
+	border-bottom 0 none
+	background-image url('/img/gh-enterprise-bg.jpg')
+	background-position center
+	background-size cover
+	text-shadow(0 1px 2px rgba(0, 0, 0, 0.3))
+	box-shadow(0 10px 20px rgba(0, 0, 0, 0.1) inset)
+	> div
+		text-align center
+		> .heading
+			color rgb(255, 255, 255)
+		> .lead
+			color rgb(206, 203, 218)
+		> .btn
+			margin 15px 0 40px
+			border 0 none
+			box-shadow-two(0 1px 0 rgba(255, 255, 255, 0.25) inset, 0 2px 6px rgba(0, 0, 0, 0.25))
+		> img
+			margin-top 0
+
+
+
+
+
+//=====================================================
+// import style of footer
+//=====================================================
+@import './module/footer'

@@ -1,0 +1,19 @@
+header#header.l-header
+	div.container.cf
+		h1.logo
+			a(href="#") GitHub
+		a.btn.topSignIn(href="#") Sign in
+		nav#navigation.nav
+			ul.nav-body
+				li
+					a(href="#") Explore
+				li
+					a(href="#") Features
+				li
+					a(href="#") Enterprise
+				li
+					a(href="#") Blog
+		form#searchForm.topSearchForm(action="/search", method="get", accept-charset="UTF-8")
+			label(for="search") Search:
+			input(name="search", type="text", placeholder="Search or type a command", data-hotkey="s")
+			button(title="Show command bar help") Show command bar help

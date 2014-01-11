@@ -1,0 +1,15 @@
+doctype html
+html
+	head
+		title= title
+		- var env = "develoption"
+		if (env === "develoption")
+			link(rel='stylesheet', href='/css/style.css')
+		else if (env === "production")
+			link(rel='stylesheet', href='/css/style.min.css')
+		else
+			//-<!-- build:css public/css/style.min.css -->
+			link(rel='stylesheet', href='public/css/style.css')
+			//-<!-- endbuild -->
+	body
+		block content

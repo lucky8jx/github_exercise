@@ -1,0 +1,22 @@
+{
+  "name": "jQuery-Cookbook",
+  "version": "0.0.1",
+  "author": "lucky8jx",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "3.4.4",
+    "jade": "*",
+    "stylus": "*",
+    "mongoose": "*"
+  },
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-jade-usemin": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-cssmin": "*"
+  }
+}
