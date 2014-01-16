@@ -2,6 +2,9 @@ doctype html
 html
 	head
 		title= title
+		meta(charset="UTF-8")
+		link(href="/img/favicon.ico", type="image/x-icon", rel="icon")
+		link(href="/img/github-logo.svg", type="image/svg", rel="logo")
 		- var env = "develoption"
 		if (env === "develoption")
 			link(rel='stylesheet', href='/css/style.css')

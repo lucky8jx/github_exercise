@@ -7,17 +7,26 @@ block content
 			div.container.cf
 				h1 Build software better, together.
 				form#signUpHome.signUpHome(method="post", action="/join", accept-charset="UTF-8")
-					dl.input
-						dd
+					//- dl.input
+					//- 	dd
+					//- 		input(type="text", data-autocheck-url="/signup_check/username", placeholder="Pick a username")
+					//- dl.input
+					//- 	dd
+					//- 		input(type="email", data-autocheck-url="/signup_check/email", placeholder="Your email")
+					//- dl.input
+					//- 	dd
+					//- 		input(type="password", data-autocheck-url="/signup_check/password", placeholder="Create a password")
+					//- p.textPrompt
+					//- 	| Use at least one lowercase letter, one numeral, and seven characters.
+					ul.input
+						li
 							input(type="text", data-autocheck-url="/signup_check/username", placeholder="Pick a username")
-					dl.input
-						dd
+						li
 							input(type="email", data-autocheck-url="/signup_check/email", placeholder="Your email")
-					dl.input
-						dd
+						li
 							input(type="password", data-autocheck-url="/signup_check/password", placeholder="Create a password")
-					p.textPrompt
-						| Use at least one lowercase letter, one numeral, and seven characters.
+							p.textPrompt
+								| Use at least one lowercase letter, one numeral, and seven characters.
 					button.btn(type="submit") Sign up for GitHub
 					p.textPrompt
 						| By clicking "Sign up for GitHub", you agree to our 
@@ -71,7 +80,8 @@ block content
 								img(src="/img/gh-app-windows.png", alt="")
 						li
 							a(href="#").showMac
-								img(src="/img/gh-app-eclipse.png", alt="")
+								//- img(src="/img/gh-app-eclipse.png", alt="")
+								img(alt="", src="data:image/png;base64,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")
 		section.sec.sec-enterprise
 			div.container
 				h1.heading Bring GitHub to work.

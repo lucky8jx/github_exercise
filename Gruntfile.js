@@ -1,6 +1,6 @@
 module.exports = function(grunt) {
 	grunt.initConfig({
-		pkg: grunt.readFile('package.json'),
+		pkg: grunt.file.readJSON('package.json'),
 		jadeUsemin: {
 			options: {
 				banner: '/* <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %>*/\n'

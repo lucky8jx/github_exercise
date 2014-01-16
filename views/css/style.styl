@@ -56,7 +56,7 @@ input
 //=============================================
 // import style of header
 //=================================================
-@import './module/header'
+@import './module/header'	
 
 //===============================================
 // The main style 
@@ -154,10 +154,10 @@ input
 		
 .input
 	position relative
-	margin-bottom 10px
 	margin-top 0
-	> dd
-		margin 0
+	> li
+		+ li
+			margin-top 10px
 		> input
 			width 93%
 			padding 10px
@@ -168,8 +168,8 @@ input
 				border-color rgb(255, 255, 255)
 				background-color rgb(255, 255, 255)
 				box-shadow-two(0 1px 2px rgba(0, 0, 0, 0.075) inset, 0 0 12px rgba(255, 255, 255, 0.75))
-	+ .textPrompt
-		margin-top 5px
+		> .textPrompt
+			margin-top 5px
 .textPrompt
 	color rgb(153, 153, 153)
 
@@ -179,10 +179,12 @@ input
 		text-align center
 .row
 	margin 0 -15px
+	// margin 0
 .column
 	position relative
 	float left
 	width 33%
+	// width 30%
 	margin-top 150px
 	padding 15px
 	text-align center

@@ -7,7 +7,12 @@
 	float left
 	margin 0
 	> a
+		&:before
+			// content url('/img/github-logo.svg')
+			// display block
+			// width 50px
 		// font-size 15px
+		// font-size 32px
 		color rgb(70, 70, 70)
 		letter-spacing -1px
 		transition(all 100ms ease-in 0s)
@@ -27,7 +32,6 @@
 	vertical(rgb(252, 252, 252), rgb(245, 245, 245), rgb(238, 238, 238))
 	text-shadow(0 1px 0 rgba(255, 255, 255, 0.9))
 	&:hover
-		// text-decoration none
 		border-color rgb(204, 204, 204)
 		vertical(rgb(238, 238, 238), rgb(231, 231, 231), rgb(224, 224, 224))
 .nav
@@ -53,11 +57,14 @@
 	position absolute
 	top 5px
 	left 110px
+	width 220px
 	> label
 		display none
 		font-size 0
 		color rgba(0, 0, 0, 0)
 		text-indent -9999px
+	> input
+		width 100%
 	> button
 		position absolute
 		right 0
@@ -72,3 +79,8 @@
 		&:before
 			content ""
 			display block
+
+// Search form is focused
+.is-sf-focus
+	> .nav
+		opacity 0
